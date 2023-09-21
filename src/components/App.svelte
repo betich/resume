@@ -16,7 +16,7 @@
 </script>
 
 <header class="web-only text-center p-4 sm:p-6 bg-green-400 text-white w-screen">
-  <h1 class="text-4xl">Resumette</h1>
+  <h1 class="text-[20pt]">Resumette</h1>
   <h3>
     <button on:click={() => window.print()} class="underline text-lg">[Print]</button>
   </h3>
@@ -33,7 +33,7 @@
 
   <section>
     <Hideable>
-      <h2 class="text-2xl print:text-4xl uppercase text-left">Technologies, Languages and Tools</h2>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Technologies, Languages and Tools</h2>
       <hr />
       <ul class="text-left list-disc pl-8">
         {#each technologies as tech}
@@ -50,7 +50,7 @@
 
   <section>
     <Hideable>
-      <h2 class="text-2xl print:text-4xl uppercase text-left">Education</h2>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Education</h2>
       <hr />
 
       <ul class="text-left list-disc pl-8">
@@ -67,7 +67,7 @@
 
   <section>
     <Hideable>
-      <h2 class="text-2xl print:text-4xl uppercase text-left">Work Experience</h2>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Work Experience</h2>
       <hr />
 
       {#each workExperiences as exp}
@@ -78,7 +78,7 @@
 
   <section>
     <Hideable>
-      <h2 class="text-2xl print:text-4xl uppercase text-left">Projects</h2>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Projects</h2>
       <hr />
 
       <ul class="text-left list-disc pl-8">
@@ -99,7 +99,7 @@
 
   <section>
     <Hideable>
-      <h2 class="text-2xl print:text-4xl uppercase text-left">Interests</h2>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Interests</h2>
       <hr />
 
       <ul class="text-left list-disc pl-8">
@@ -152,8 +152,8 @@
 
   @media print {
     * {
-      font-size: 0.5rem;
-      line-height: 0.85rem;
+      font-size: 7.5pt;
+      line-height: 0.8rem;
       font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif;
     }
 
