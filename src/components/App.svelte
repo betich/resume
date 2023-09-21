@@ -15,7 +15,9 @@
   const dataLink = `${sourceLink}/blob/main/src/data.ts`
 </script>
 
-<header class="web-only text-center p-4 sm:p-6 bg-green-400 text-white w-screen">
+<header
+  class="web-only text-center p-4 sm:p-6 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black text-white w-screen"
+>
   <h1 class="text-[20pt]">Resumette</h1>
   <h3>
     <button on:click={() => window.print()} class="underline text-lg">[Print]</button>
@@ -24,6 +26,10 @@
     Printer-friendly standard résumé, any HTML tags with <code>web-only</code> CSS class will be hidden on print.
   </p>
   <p>You can click at any sections or lines hide some information before printing.</p>
+  <p>
+    Modified from <a href="https://github.com/narze" target="_blank" rel="noopener">narze's</a>
+    <a href="https://github.com/narze/resume/tree/main" target="_blank" rel="noopener">awesome resume</a>.
+  </p>
   <a href={sourceLink} target="_blank" rel="noopener">[Source]</a>
   <a href={dataLink} target="_blank" rel="noopener">[Data]</a>
 </header>
