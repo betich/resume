@@ -55,7 +55,7 @@ export const workExperiences = [
 		url: 'https://instagram.com/escchula',
 		years: ['2023', 'current'],
 		details: [
-      'Helped organize events and activities for engineering students at Chulalongkorn University.',
+      'Helped organize events and activities for more than 3,000 engineering students at Chulalongkorn University.',
       'Coordinated with Chula University Engineering Alumni to host the Intania Music Festival, a music festival aimed to celebrate the re-opening of Larngear in the Faculty of Engineering.'
 		]
 	},
@@ -65,7 +65,7 @@ export const workExperiences = [
 		url: 'https://instagram.com/intania_production_house',
 		years: ['2023', 'current'],
 		details: [
-      'A club in Faculty of Engineering, Chulalongkorn University that gathers students who are interested in graphic design and video production together.',
+      'A club with more than 100 members in Faculty of Engineering, Chulalongkorn University that gathers students who are interested in graphic design and video production together.',
       'Planned workshops and activities for members to learn and improve their graphic design skills.',
 		]
 	},
@@ -86,7 +86,7 @@ export const workExperiences = [
 		url: 'https://github.com/isd-sgcu',
 		years: ['2022', 'current'],
 		details: [
-      'Lead the department to develop and maintain several services and websites in 2023 for the Student Government of Chulalongkorn University (SGCU) using NextJS, used by more than 6,000 students',
+      'Lead the department to develop and maintain several services and websites in 2023 for the Student Government of Chulalongkorn University (SGCU) using NextJS used by more than 6,000 students',
       'Developed the front-end for 2 projects (Fresher\'s Fair 65, CU Wander) in 2022 using NextJS and Ionic React',
 		]
 	},

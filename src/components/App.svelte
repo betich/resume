@@ -121,6 +121,10 @@
 </main>
 
 <style lang="postcss">
+  * {
+    font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+
   main {
     overflow-x: hidden;
   }
@@ -148,7 +152,9 @@
 
   @media print {
     * {
-      @apply text-xs;
+      font-size: 0.5rem;
+      line-height: 0.85rem;
+      font-family: "Inter", "Roboto", "Helvetica", "Arial", sans-serif;
     }
 
     :global(.print-only) {
