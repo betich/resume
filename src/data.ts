@@ -108,7 +108,7 @@ export const workExperiences = [
 		years: ['2021', '2022'],
 		details: [
 			'Designed, developed and maintained several services for the Clubs Registration System (Clubs data editor, etc.) using NextJS, used by more than 3,000 students',
-      'Developed more than 4 web apps for Triam Udom Students using NextJS',
+      'Developed more than 4 web applications for Triam Udom Students using NextJS',
 		]
 	},
 ];
@@ -117,7 +117,7 @@ export const projects = [
 	{
 		name: 'Gamlytics',
 		details: 'An AI powered analytics and management platform for E-Sports.',
-		url: 'gamlytics.co',
+		url: 'gamlytics.gg',
 		hide: false
 	},
 	{
@@ -130,7 +130,7 @@ export const projects = [
 		name: 'Food & Film Festival 2023',
 		details: 'Lead the Graphic Design team for Food & Film Festival 2023, an event in Chulalongkorn University.',
 		url: 'instagram.com/foodfilmfest.cu/',
-		hide: false
+		hide: true
 	},
 	{
 		name: 'Rub Puen Kao Mai 66 Website',
@@ -151,7 +151,7 @@ export const projects = [
 		hide: false
 	},
 	{
-		name: 'Vid Love Vid U',
+		name: 'Vid Love Vid U 2023',
 		details: 'An interactive website for Vid Love Vid U, a Valentine\'s day event. Take a quiz to discover your love personality and collect E-Stamps to win prizes.',
 		url: 'github.com/vidlovevidu-chula/vlvu-website',
 		hide: false
