@@ -9,7 +9,7 @@ export const introData = {
 	phone: '',
 	email: 'betich365@gmail.com',
 	github: 'betich',
-	linkedin: 'panithi-makthiengtrong-80365a205',
+	linkedin: 'betich',
   instagram: 'ttthhheeeeeeeee',
   facebook: "panithi.makthiengtrong",
 	location: 'Bangkok, Thailand',
