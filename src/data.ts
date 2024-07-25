@@ -50,7 +50,7 @@ export const educations = [
 
 export const workExperiences = [
   {
-		position: 'Head or Marketing and Communication Department',
+		position: 'Head or Marketing and Communication',
 		company: 'Engineering Student Committee, Chulalongkorn University',
 		url: 'https://instagram.com/escchula',
 		years: ['2024', 'current'],
@@ -79,7 +79,7 @@ export const workExperiences = [
 		]
 	},
 	{
-		position: 'Head of Graphic Design, Founding Member',
+		position: 'Head of Graphic Design (Founding Member)',
 		company: 'Intania Production House',
 		url: 'https://instagram.com/intania_production_house',
 		years: ['2023', '2024'],
