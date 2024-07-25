@@ -18,17 +18,17 @@ export const introData = {
 
 export const technologies = [
 	{
-		section: 'Languages:',
-		details: 'JavaScript, Node.js, TypeScript (proficient), Golang (learning)'
+		section: 'Programming Languages:',
+		details: 'JavaScript, Node.js, TypeScript (proficient), Python, Golang (learning)'
 	},
 	{
-		section: 'Frameworks:',
-		details: 'ReactJS, NextJS, TailwindCSS (proficient). ExpressJS, Svelte, Astro (familiar). Ionic React (learning)'
+		section: 'Frameworks/Libraries:',
+		details: 'ReactJS, NextJS, TailwindCSS, ExpressJS, Svelte, Pytorch, Keras (Tensorflow), Astro (familiar), Ionic React (learning)'
 	},
 	{
 		section: 'Tools:',
 		details:
-			'Git, Docker, Firebase, Vercel, Github Actions'
+			'Git, Docker, Firebase, Vercel, Github Actions, AWS, Google Cloud Platform'
 	},
 	{
 		section: 'Other:',
@@ -50,10 +50,29 @@ export const educations = [
 
 export const workExperiences = [
   {
+		position: 'Head or Marketing and Communication Department',
+		company: 'Engineering Student Committee, Chulalongkorn University',
+		url: 'https://instagram.com/escchula',
+		years: ['2024', 'current'],
+		details: [
+      'Managing the social media accounts of ESC (instagram.com/esccchula, fb.me/escchula) and generating revenue for the organization.'
+		]
+	},
+  {
+		position: 'Data Scientist Intern',
+		company: 'Bualuang Securities Public Company Limited',
+		url: 'https://www.bualuang.co.th/',
+		years: ['2024', '2024'],
+		details: [
+      'Developed artificial neural network models to predict values and classify data based on historical data.',
+      'Researched about recommendation systems and deep recommender systems to effectively recommend products to customers.',
+		]
+	},
+  {
 		position: 'Member, Internal Affairs',
 		company: 'Engineering Student Committee, Chulalongkorn University',
 		url: 'https://instagram.com/escchula',
-		years: ['2023', 'current'],
+		years: ['2023', '2024'],
 		details: [
       'Helped organize events and activities for more than 3,000 engineering students at Chulalongkorn University.',
       'Coordinated with Chula University Engineering Alumni to host the Intania Music Festival, a music festival aimed to celebrate the re-opening of "Larngear", a community space in the Faculty of Engineering.'
@@ -63,7 +82,7 @@ export const workExperiences = [
 		position: 'Head of Graphic Design, Founding Member',
 		company: 'Intania Production House',
 		url: 'https://instagram.com/intania_production_house',
-		years: ['2023', 'current'],
+		years: ['2023', '2024'],
 		details: [
       'A club with more than 100 members in Faculty of Engineering, Chulalongkorn University that gathers students who are interested in graphic design and video production together.',
       'Planned workshops and activities for members to learn and improve their graphic design skills.',
@@ -84,9 +103,18 @@ export const workExperiences = [
 		position: 'President',
 		company: 'Information System Development Department, Student Government of Chulalongkorn University',
 		url: 'https://github.com/isd-sgcu',
-		years: ['2022', 'current'],
+		years: ['2023', '2024'],
 		details: [
       'Lead the department to develop and maintain several services and websites in 2023 for the Student Government of Chulalongkorn University (SGCU) using NextJS, used by more than 6,000 students',
+      'Managed a team of developers and designers to develop and maintain services for the Student Government of Chulalongkorn University (SGCU).'
+		]
+	},
+	{
+		position: 'Front-end Developer',
+		company: 'Information System Development Department, Student Government of Chulalongkorn University',
+		url: 'https://github.com/isd-sgcu',
+		years: ['2022', '2023'],
+		details: [
       'Developed the front-end for 2 projects (Fresher\'s Fair 65, CU Wander) in 2022 using NextJS and Ionic React',
 		]
 	},
@@ -114,6 +142,12 @@ export const workExperiences = [
 ];
 
 export const projects = [
+	{
+		name: 'Junior Webmaster Camp 13',
+		details: 'Web services for Junior Webmaster Camp 13, a camp that teaches web development to high school students.',
+		url: '13.jwc.in.th',
+		hide: false
+	},
 	{
 		name: 'Gamlytics',
 		details: 'An AI powered analytics and management platform for E-Sports.',
