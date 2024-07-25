@@ -22,7 +22,7 @@ export const technologies = [
 		details: 'JavaScript, Node.js, TypeScript (proficient), Python, Golang (learning)'
 	},
 	{
-		section: 'Frameworks/Libraries:',
+		section: 'Libraries:',
 		details: 'ReactJS, NextJS, TailwindCSS, ExpressJS, Svelte, Pytorch, Keras (Tensorflow), Astro (familiar), Ionic React (learning)'
 	},
 	{
