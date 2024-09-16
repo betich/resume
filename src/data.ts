@@ -19,7 +19,7 @@ export const introData = {
 export const technologies = [
 	{
 		section: 'Programming Languages:',
-		details: 'JavaScript, Node.js, TypeScript (proficient), Python, Golang (learning)'
+		details: 'JavaScript, Node.js, TypeScript, Python, Golang'
 	},
 	{
 		section: 'Libraries:',
@@ -55,7 +55,11 @@ export const workExperiences = [
 		url: 'https://instagram.com/escchula',
 		years: ['2024', 'current'],
 		details: [
-      'Managing the social media accounts of ESC (instagram.com/esccchula, fb.me/escchula) and generating revenue for the organization.'
+      'Managing the social media accounts of ESC (instagram.com/esccchula, fb.me/escchula) and generating revenue for the organization.',
+      'Revised the Brand Identity of ESC to be more modern and professional.',
+      'Set up the ESC design system — with design tokens, variables, components, and styles in Figma for the ESC design team to use.',
+      'Collaborated with other departments to publicize events and activities of the Faculty of Engineering, Chulalongkorn University.',
+      'Initiated the Chula Intania Shop project, an online shop for Faculty of Engineering, Chulalongkorn University merchandise.'
 		]
 	},
   {
@@ -261,6 +265,6 @@ export const projects = [
 export const interests = [
 	'Talk to me about : Coding, Creativity, Music, Games, Graphic Design',
 	'Games : Stardew Valley, Minecraft, GTA V, MOBA, etc.',
-  'Music : Pop, Rock, Jazz Fusion, lots of *Funk*, and a little bit of everything',
+  'Music : Pop, Rock, Jazz Fusion, *Funk*, and actually almost everything',
   'Instruments : Keyboard'
 ];
