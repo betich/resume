@@ -23,7 +23,7 @@ export const technologies = [
 	},
 	{
 		section: 'Libraries:',
-		details: 'ReactJS, NextJS, TailwindCSS, ExpressJS, Svelte, Pytorch, Keras (Tensorflow), Astro (familiar), Ionic React (learning)'
+		details: 'ReactJS, NextJS, TailwindCSS, ExpressJS, Svelte, Pytorch, Tensorflow, Astro, Ionic React'
 	},
 	{
 		section: 'Tools:',
