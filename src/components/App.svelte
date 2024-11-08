@@ -28,7 +28,7 @@
   <p>You can click at any sections or lines hide some information before printing.</p>
   <p>
     Modified from <a href="https://github.com/narze" target="_blank" rel="noopener">narze's</a>
-    <a href="https://github.com/narze/resume/tree/main" target="_blank" rel="noopener">awesome resume</a>.
+    <a href="https://github.com/narze/resume/tree/main" target="_blank" rel="noopener">resume template</a>.
   </p>
   <a href={sourceLink} target="_blank" rel="noopener">[Source]</a>
   <a href={dataLink} target="_blank" rel="noopener">[Data]</a>
