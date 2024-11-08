@@ -3,6 +3,7 @@
   import Work from "./Work.svelte"
   import Hideable from "./Hideable.svelte"
   import {
+    activityExperiences,
     educations,
     fullVersionLink,
     interests,
@@ -77,6 +78,17 @@
       <hr />
 
       {#each workExperiences as exp}
+        <Work {...exp} />
+      {/each}
+    </Hideable>
+  </section>
+
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Student Activity Experience</h2>
+      <hr />
+
+      {#each activityExperiences as exp}
         <Work {...exp} />
       {/each}
     </Hideable>
