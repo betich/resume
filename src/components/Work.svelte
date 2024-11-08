@@ -12,7 +12,7 @@
 <div class="work-experience">
   <Hideable>
     <div class="flex font-bold mb-2 print:mb-1">
-      <div class="flex-1 text-left">{position}, {type}</div>
+      <div class="flex-1 text-left">{position}{type !== "" ? "," : ""} {type}</div>
       <div class="flex-0">
         <a href={url} target="_blank" rel="noreferrer">{company}</a>
       </div>

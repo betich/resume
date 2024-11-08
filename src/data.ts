@@ -80,14 +80,14 @@ export const activityExperiences = [
     years: ['Jun 2024', 'current'],
     details: [
       'Managing the social media accounts of ESC (instagram.com/esccchula, fb.me/escchula) with more than 440K views and 57k reach combined per month.',
-      'Set up the ESC design system — with design tokens, variables, components, and styles for the ESC design team quickly create new designs using Figma.',
+      'Set up the ESC design system — a combination of design tokens, variables, components, and styles kit for the ESC design team quickly create new designs using Figma.',
       'Initiated the Chula Intania Shop project, an online shop for Faculty of Engineering, Chulalongkorn University merchandise with an estimated revenue of more than 40k THB in the span of 2 products.',
       'Collaborated with other departments to publicize events and activities of the Faculty of Engineering, Chulalongkorn University.',
       'Revised the Brand Identity of ESC to be more modern and professional.',
     ]
   },
   {
-		position: 'Member, Internal Affairs',
+		position: 'Inner Member of Internal Affairs',
 		company: 'Engineering Student Committee, Chulalongkorn University',
 		url: 'https://instagram.com/escchula',
 		years: ['Jun 2023', 'May 2024'],
@@ -141,7 +141,7 @@ export const activityExperiences = [
 		]
 	},
   {
-		position: 'Collective Member',
+		position: 'Event Host',
 		company: 'Creatorsgarten',
 		url: 'https://creatorsgarten.org',
 		years: ['2021', 'current'],
