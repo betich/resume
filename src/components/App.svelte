@@ -4,6 +4,7 @@
   import Hideable from "./Hideable.svelte"
   import {
     activityExperiences,
+    contributions,
     educations,
     fullVersionLink,
     interests,
@@ -96,11 +97,32 @@
 
   <section>
     <Hideable>
-      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Projects</h2>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Personal Projects</h2>
       <hr />
 
       <ul class="text-left list-disc pl-8">
         {#each projects as project}
+          <Hideable hide={project.hide}>
+            <li>
+              <strong>{project.name}</strong>
+              - {project.details}
+              {#if project.url}
+                <a href="https://{project.url}" target="_blank" rel="noreferrer"><strong>{project.url}</strong></a>
+              {/if}
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
+  </section>
+
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Contributions</h2>
+      <hr />
+
+      <ul class="text-left list-disc pl-8">
+        {#each contributions as project}
           <Hideable hide={project.hide}>
             <li>
               <strong>{project.name}</strong>

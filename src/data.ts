@@ -112,9 +112,10 @@ export const activityExperiences = [
 		url: 'https://thinc.in.th',
 		years: ['2022', 'current'],
 		details: [
-      'Helped build a community of Chulalongkorn University students who are interested in using technology to create things that make an impact on society.',
-      'Organized events and workshops to help students learn to use technology to build prodjects.',
-      'Helped broadcast the club\'s activities to the through social media.'
+      'Contributed in building a community of Chulalongkorn University students who are interested in using technology to create things that make an impact on society.',
+      'Advised club members on how to develop their projects and their software development, data science, product design skills in club projects.',
+      'Organized events and workshops for students to learn how to use technology to build prodjects.',
+      'Broadcasted the club\'s activities to the through social media.',
 		]
 	},
 	{
@@ -157,21 +158,26 @@ export const activityExperiences = [
 		years: ['May 2021', 'Apr 2022'],
 		details: [
 			'Designed, developed and maintained several services for the Clubs Registration System (Clubs data editor, etc.) using NextJS, used by more than 3,000 students',
-      'Developed more than 4 full-stack web applications for Triam Udom Suksa School Students using NextJS, TailwindCSS and Framer Motion to develop the front-end of websites and Firebase to develop the back-end of websites.',
-      'Maintained the Triam Udom Club Registration System, A club registration system for Triam Udom Suksa School used by more than 3,000 Triam Udom Suksa Students to register for a club. Including a club data editor, a club registration system, and a club management system using NextJS and Firebase (register.clubs.triamudom.ac.th).',
-      'Developed the Triam Udom Schedule Generator web application, a study and exam schedule generator using NextJS. (github.com/triamudomcmc/schedule-generator)',
-      'Developed the Triam Udom Open House 2022 website, a landing page displaying clubs data, articles, an interactive map, real-time schedule, a registration system, and an interactive game using NextJS (github.com/triamudomcmc/openhouse2022).',
-      'Developed an Online Loy Kratong website, which plays an animation of a custom virtual Kratong floating throughs the Ku Bua Pond at Triam Udom Suksa School using NextJS, TailwindCSS and Framer Motion (github.com/triamudomcmc/loy-kratong).'
+      'Developed over 4 full-stack web applications for Triam Udom Suksa School, streamlining club registrations, study and exam scheduling, and event engagement for over 3,000 students. Highlights include maintaining the Club Registration System, creating a Schedule Generator, building an interactive Open House 2022 website, and designing an Online Loy Kratong animation. Built with NextJS, TailwindCSS, Framer Motion, and Firebase.'
 		]
 	},
 ]
 
 export const projects = [
-	{
+  {
+    name: 'TCAS Schedule Generator',
+      details: 'A website for generating a study and exam schedule for students who are applying for universities in Thailand.',
+      url: 'tcas.betich.me',
+      hide: false
+    },
+];
+
+export const contributions = [
+  {
 		name: 'Junior Webmaster Camp 13',
 		details: 'Web services for Junior Webmaster Camp 13, a camp that teaches web development to high school students.',
 		url: '13.jwc.in.th',
-		hide: false
+		hide: true
 	},
 	{
 		name: 'Vid Love Vid U 2024',
@@ -204,12 +210,6 @@ export const projects = [
 		hide: false
 	},
 	{
-  name: 'TCAS Schedule Generator',
-		details: '(My personal project) A website for generating a study and exam schedule for students who are applying for universities in Thailand.',
-		url: 'tcas.betich.me',
-		hide: false
-	},
-	{
 		name: 'Programming.in.th',
 		details: 'Contributed in developed the front-end for Programming.in.th, a website for practicing algorithms, data structures and competitive programming.',
 		url: 'programming.in.th',
@@ -219,18 +219,18 @@ export const projects = [
 		name: 'Intania Open House 2023',
 		details: 'The website for Intania Open House 2023, with an interactive quiz to see which major suits you the best.',
 		url: 'github.com/thinc-org/intania-oph',
-		hide: true
+		hide: false
 	},
   {
 		name: 'EIC Robocup Website',
 		details: 'Initiated and developed a website for the EIC club, Chulalongkorn University.',
-		url: 'eicrobocup.com',
-		hide: true
+		url: 'https://github.com/robocup-eic/eic-website',
+		hide: false
 	},
   {
 		name: 'TOCPC Website',
 		details: 'The website for Thailand Online Competitive Programming Contest 2021.',
-		url: 'tocpc.codes',
+		url: 'https://github.com/TOCPC/tocpc-site',
 		hide: true
 	},
   {
@@ -239,9 +239,8 @@ export const projects = [
 		url: 'stupid.hackathon.in.th/5',
 		hide: true
 	},
-];
+]
 
 export const interests = [
-	'Talk to me about : Coding, Creativity, Music, Games, Graphic Design',
   'Areas of Interest : Technology, Web Development, UX/UI Design, Graphic Design, Machine Learning, Artificial Intelligence, Robotics, Music Theory, Video Production',
 ];
