@@ -166,7 +166,7 @@ export const activityExperiences = [
 export const projects = [
   {
     name: 'TCAS Schedule Generator',
-      details: 'A website for generating a study and exam schedule for students who are applying for universities in Thailand.',
+      details: 'A website for generating a study and exam schedule for students who are applying for universities in Thailand, the website gained a small traction via twitter and my friends.',
       url: 'tcas.betich.me',
       hide: false
     },
