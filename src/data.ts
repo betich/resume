@@ -175,7 +175,7 @@ export const projects = [
 	},
 	{
 		name: 'Vid Love Vid U 2024',
-		details: 'An interactive game made for the CU-TU Unity Ball 2024 event.',
+		details: 'Initiated and coached the website team of the Vid Love Vid U 2024 event.',
 		url: 'https://github.com/vidlovevidu-chula/vlvu2024-website',
 		hide: true
 	},
@@ -183,7 +183,7 @@ export const projects = [
 		name: 'Vishnu 21st',
 		details: 'Worked with the PR team and IT team for Vishnu 21st, an event that welcomes new students to the Faculty of Engineering, Chulalongkorn University.',
 		url: 'instagram.com/vishnu21st',
-		hide: false
+		hide: true
 	},
   {
 		name: 'Food & Film Festival 2023',
@@ -193,25 +193,25 @@ export const projects = [
 	},
 	{
 		name: 'PED4you',
-		details: 'An interactive website that provides information about the 2023 Election, including an Election Simulator, a game that guides you through the process of the election.',
+		details: 'Initiated and developed an interactive website that provides information about the 2023 Election, including an Election Simulator, a game that guides you through the process of the election. Integrated with a machine learning model that asseses if the election ballot is valid or not. This project was used by more than 10,000 users and was featured in several news articles.',
 		url: 'github.com/PED4you/ped4you-website',
 		hide: false
 	},
 	{
 		name: 'Vid Love Vid U 2023',
-		details: 'An interactive website for Vid Love Vid U, a Valentine\'s day event. Take a quiz to discover your love personality and collect E-Stamps to win prizes.',
+		details: 'Initiated and developed an interactive website for Vid Love Vid U, a Valentine\'s day event. Take a quiz to discover your love personality and collect E-Stamps to win prizes.',
 		url: 'github.com/vidlovevidu-chula/vlvu-website',
 		hide: false
 	},
 	{
   name: 'TCAS Schedule Generator',
-		details: 'A website for generating a study and exam schedule for students who are applying for universities in Thailand.',
+		details: '(My personal project) A website for generating a study and exam schedule for students who are applying for universities in Thailand.',
 		url: 'tcas.betich.me',
 		hide: false
 	},
 	{
 		name: 'Programming.in.th',
-		details: 'A website for practicing algorithms, data structures and competitive programming.',
+		details: 'Contributed in developed the front-end for Programming.in.th, a website for practicing algorithms, data structures and competitive programming.',
 		url: 'programming.in.th',
 		hide: false
 	},
@@ -223,7 +223,7 @@ export const projects = [
 	},
   {
 		name: 'EIC Robocup Website',
-		details: 'A website for the EIC club, Chulalongkorn University.',
+		details: 'Initiated and developed a website for the EIC club, Chulalongkorn University.',
 		url: 'eicrobocup.com',
 		hide: true
 	},
@@ -243,6 +243,5 @@ export const projects = [
 
 export const interests = [
 	'Talk to me about : Coding, Creativity, Music, Games, Graphic Design',
-	// 'Games : Stardew Valley, Minecraft, GTA V, MOBA, etc.',
-  // 'Music : Pop, Rock, Jazz Fusion, *Funk*',
+  'Areas of Interest : Technology, Web Development, UX/UI Design, Graphic Design, Machine Learning, Artificial Intelligence, Robotics, Music Theory, Video Production',
 ];
