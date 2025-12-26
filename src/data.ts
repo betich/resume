@@ -49,6 +49,17 @@ export const educations = [
 ];
 
 export const workExperiences = [
+	  {
+		position: 'Software Engineer',
+    type: 'Internship',
+		company: 'Sertis Company Limited',
+		url: 'https://sertiscorp.com/',
+		years: ['Jun 2025', 'Oct 2025'],
+		details: [
+      'Helped develop and implement a design tokens system that synchronizes work from Figma by the UX/UI team with the dev team by converting them into code automatically using Style Dictionary.',
+      'Used ReactJS to build front-end systems for enterprise-grade applications.',
+		]
+	},
   {
 		position: 'Data Scientist',
     type: 'Internship',
