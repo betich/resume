@@ -184,6 +184,12 @@ export const projects = [
 ];
 
 export const contributions = [
+ {
+    name: "Contester.life",
+    details: "A website that gathers gather competition opportunities, camps, and activities that may be the starting point of great opportunities",
+    url: "https://contester.life",
+	 hide: false
+  },
   {
 		name: 'Junior Webmaster Camp 13',
 		details: 'Web services for Junior Webmaster Camp 13, a camp that teaches web development to high school students.',
