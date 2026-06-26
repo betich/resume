@@ -34,17 +34,10 @@
     design: "Design & Marketing CV",
   }
 
-  // Reference `filter` directly here so Svelte tracks it as a dependency and
-  // re-runs the filtered lists below whenever the selection changes.
+  // Reference `filter` directly here so Svelte tracks it as a dependency.
+  // Non-matching items aren't removed from the DOM — they're passed to the
+  // baked-in `hide` feature (greyed on screen, omitted on print).
   $: matches = (tags: Tag[] = []) => tags.includes(filter)
-
-  $: fTechnologies = technologies.filter((t) => matches(t.tags))
-  $: fEducations = educations.filter((e) => matches(e.tags))
-  $: fWorkExperiences = workExperiences.filter((e) => matches(e.tags))
-  $: fActivityExperiences = activityExperiences.filter((e) => matches(e.tags))
-  $: fProjects = projects.filter((p) => matches(p.tags))
-  $: fContributions = contributions.filter((p) => matches(p.tags))
-  $: fInterests = interests.filter((i) => matches(i.tags))
 
   $: docTitle = docTitles[filter]
   // Updates the browser tab + the suggested filename when saving as PDF.
@@ -98,134 +91,120 @@
 
   <Intro {...introData} />
 
-  {#if fTechnologies.length}
-    <section>
-      <Hideable>
-        <h2 class="text-2xl print:text-[20pt] uppercase text-left">Technologies, Languages and Tools</h2>
-        <hr />
-        <ul class="text-left list-disc pl-8">
-          {#each fTechnologies as tech}
-            <Hideable>
-              <li>
-                <span class="w-28 inline-block">{tech.section}</span>
-                <span>{tech.details}</span>
-              </li>
-            </Hideable>
-          {/each}
-        </ul>
-      </Hideable>
-    </section>
-  {/if}
-
-  {#if fEducations.length}
-    <section>
-      <Hideable>
-        <h2 class="text-2xl print:text-[20pt] uppercase text-left">Education</h2>
-        <hr />
-
-        <ul class="text-left list-disc pl-8">
-          {#each fEducations as edu}
-            <Hideable>
-              <li>
-                <strong>{edu.head}</strong>, {edu.details}
-              </li>
-            </Hideable>
-          {/each}
-        </ul>
-      </Hideable>
-    </section>
-  {/if}
-
-  {#if fWorkExperiences.length}
-    <section>
-      <Hideable>
-        <h2 class="text-2xl print:text-[20pt] uppercase text-left">Work Experience</h2>
-        <hr />
-
-        {#each fWorkExperiences as exp}
-          <Work {...exp} />
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Technologies, Languages and Tools</h2>
+      <hr />
+      <ul class="text-left list-disc pl-8">
+        {#each technologies as tech}
+          <Hideable hide={!matches(tech.tags)}>
+            <li>
+              <span class="w-28 inline-block">{tech.section}</span>
+              <span>{tech.details}</span>
+            </li>
+          </Hideable>
         {/each}
-      </Hideable>
-    </section>
-  {/if}
+      </ul>
+    </Hideable>
+  </section>
 
-  {#if fActivityExperiences.length}
-    <section>
-      <Hideable>
-        <h2 class="text-2xl print:text-[20pt] uppercase text-left">Student Activity Experience</h2>
-        <hr />
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Education</h2>
+      <hr />
 
-        {#each fActivityExperiences as exp}
-          <Work {...exp} />
+      <ul class="text-left list-disc pl-8">
+        {#each educations as edu}
+          <Hideable hide={!matches(edu.tags)}>
+            <li>
+              <strong>{edu.head}</strong>, {edu.details}
+            </li>
+          </Hideable>
         {/each}
-      </Hideable>
-    </section>
-  {/if}
+      </ul>
+    </Hideable>
+  </section>
 
-  {#if fProjects.length}
-    <section>
-      <Hideable>
-        <h2 class="text-2xl print:text-[20pt] uppercase text-left">Personal Projects</h2>
-        <hr />
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Work Experience</h2>
+      <hr />
 
-        <ul class="text-left list-disc pl-8">
-          {#each fProjects as project}
-            <Hideable hide={project.hide}>
-              <li>
-                <strong>{project.name}</strong>
-                - {project.details}
-                {#if project.url}
-                  <a href="https://{project.url}" target="_blank" rel="noreferrer"><strong>{project.url}</strong></a>
-                {/if}
-              </li>
-            </Hideable>
-          {/each}
-        </ul>
-      </Hideable>
-    </section>
-  {/if}
+      {#each workExperiences as exp}
+        <Work {...exp} />
+      {/each}
+    </Hideable>
+  </section>
 
-  {#if fContributions.length}
-    <section>
-      <Hideable>
-        <h2 class="text-2xl print:text-[20pt] uppercase text-left">Contributions</h2>
-        <hr />
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Student Activity Experience</h2>
+      <hr />
 
-        <ul class="text-left list-disc pl-8">
-          {#each fContributions as project}
-            <Hideable hide={project.hide}>
-              <li>
-                <strong>{project.name}</strong>
-                - {project.details}
-                {#if project.url}
-                  <a href="https://{project.url}" target="_blank" rel="noreferrer"><strong>{project.url}</strong></a>
-                {/if}
-              </li>
-            </Hideable>
-          {/each}
-        </ul>
-      </Hideable>
-    </section>
-  {/if}
+      {#each activityExperiences as exp}
+        <Work {...exp} hide={!matches(exp.tags)} />
+      {/each}
+    </Hideable>
+  </section>
 
-  {#if fInterests.length}
-    <section>
-      <Hideable>
-        <h2 class="text-2xl print:text-[20pt] uppercase text-left">Interests</h2>
-        <hr />
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Personal Projects</h2>
+      <hr />
 
-        <ul class="text-left list-disc pl-8">
-          {#each fInterests as interest}
-            <Hideable>
-              <li>
-                {interest.text}
-              </li>
-            </Hideable>
-          {/each}
-        </ul>
-      </Hideable>
-    </section>
-  {/if}
+      <ul class="text-left list-disc pl-8">
+        {#each projects as project}
+          <Hideable hide={project.hide || !matches(project.tags)}>
+            <li>
+              <strong>{project.name}</strong>
+              - {project.details}
+              {#if project.url}
+                <a href="https://{project.url}" target="_blank" rel="noreferrer"><strong>{project.url}</strong></a>
+              {/if}
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
+  </section>
+
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Contributions</h2>
+      <hr />
+
+      <ul class="text-left list-disc pl-8">
+        {#each contributions as project}
+          <Hideable hide={project.hide || !matches(project.tags)}>
+            <li>
+              <strong>{project.name}</strong>
+              - {project.details}
+              {#if project.url}
+                <a href="https://{project.url}" target="_blank" rel="noreferrer"><strong>{project.url}</strong></a>
+              {/if}
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
+  </section>
+
+  <section>
+    <Hideable>
+      <h2 class="text-2xl print:text-[20pt] uppercase text-left">Interests</h2>
+      <hr />
+
+      <ul class="text-left list-disc pl-8">
+        {#each interests as interest}
+          <Hideable hide={!matches(interest.tags)}>
+            <li>
+              {interest.text}
+            </li>
+          </Hideable>
+        {/each}
+      </ul>
+    </Hideable>
+  </section>
 
   <footer class="print-only">
     (See <a href={fullVersionLink} target="_blank" rel="noopener">full version</a>
