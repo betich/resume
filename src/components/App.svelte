@@ -17,15 +17,26 @@
   } from "../data"
   const dataLink = `${sourceLink}/blob/main/src/data.ts`
 
-  type Filter = Tag | "all"
-  let filter: Filter = "all"
+  // "resume" is a curated overview (its own tag); the specific tags produce a
+  // focused CV that also renames the print output / saved PDF.
+  type Filter = Tag
+  let filter: Filter = "resume"
   const filters: { value: Filter; label: string }[] = [
-    { value: "all", label: "All" },
+    { value: "resume", label: "Résumé" },
     { value: "robotics", label: "Robotics" },
     { value: "swe", label: "Software Engineering" },
     { value: "design", label: "Design & Marketing" },
   ]
-  const matches = (tags: Tag[] = []) => filter === "all" || tags.includes(filter as Tag)
+  const docTitles: Record<Filter, string> = {
+    resume: "Résumé",
+    robotics: "Robotics CV",
+    swe: "Software Engineering CV",
+    design: "Design & Marketing CV",
+  }
+
+  // Reference `filter` directly here so Svelte tracks it as a dependency and
+  // re-runs the filtered lists below whenever the selection changes.
+  $: matches = (tags: Tag[] = []) => tags.includes(filter)
 
   $: fTechnologies = technologies.filter((t) => matches(t.tags))
   $: fEducations = educations.filter((e) => matches(e.tags))
@@ -34,12 +45,39 @@
   $: fProjects = projects.filter((p) => matches(p.tags))
   $: fContributions = contributions.filter((p) => matches(p.tags))
   $: fInterests = interests.filter((i) => matches(i.tags))
+
+  $: docTitle = docTitles[filter]
+  // Updates the browser tab + the suggested filename when saving as PDF.
+  $: if (typeof document !== "undefined") document.title = `${introData.name} — ${docTitle}`
 </script>
 
 <header
   class="web-only text-center p-4 sm:p-6 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black text-white w-screen"
 >
   <h1 class="text-[20pt]">Resumette</h1>
+
+  <nav class="flex flex-wrap gap-2 justify-center mt-3 mb-2" aria-label="Resume focus filter">
+    {#each filters as f}
+      <button
+        on:click={() => (filter = f.value)}
+        class="px-3 py-1 rounded-full border text-sm transition-colors"
+        class:bg-white={filter === f.value}
+        class:text-gray-900={filter === f.value}
+        class:border-white={filter === f.value}
+        class:text-gray-200={filter !== f.value}
+        class:border-gray-500={filter !== f.value}
+        aria-pressed={filter === f.value}
+      >
+        {f.label}
+      </button>
+    {/each}
+  </nav>
+  <p class="text-sm text-gray-300 mb-2">
+    Viewing <strong class="text-white">{docTitle}</strong>{filter === "resume"
+      ? " (overview of everything)"
+      : " — a focused CV"}.
+  </p>
+
   <h3>
     <button on:click={() => window.print()} class="underline text-lg">[Print]</button>
   </h3>
@@ -56,24 +94,9 @@
 </header>
 
 <main class="text-center p-4 m-0 md:m-8 xl:mx-auto max-w-screen-xl">
-  <Intro {...introData} />
+  <div class="print-only text-right uppercase tracking-wider text-[8pt] mb-1">{docTitle}</div>
 
-  <nav class="web-only flex flex-wrap gap-2 justify-center my-4" aria-label="Resume focus filter">
-    {#each filters as f}
-      <button
-        on:click={() => (filter = f.value)}
-        class="px-3 py-1 rounded-full border text-sm transition-colors"
-        class:bg-gray-900={filter === f.value}
-        class:text-white={filter === f.value}
-        class:border-gray-900={filter === f.value}
-        class:text-gray-600={filter !== f.value}
-        class:border-gray-300={filter !== f.value}
-        aria-pressed={filter === f.value}
-      >
-        {f.label}
-      </button>
-    {/each}
-  </nav>
+  <Intro {...introData} />
 
   {#if fTechnologies.length}
     <section>

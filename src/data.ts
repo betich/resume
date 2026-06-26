@@ -4,9 +4,10 @@ export const ogImageUrl =
     "https://og-image.vercel.app/Resumette.png?theme=light&md=1&fontSize=200px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg";
 
 // Tags used for filtering the resume into focused "versions".
-// An item can belong to multiple categories.
-export type Tag = "swe" | "robotics" | "design";
-export const ALL_TAGS: Tag[] = ["swe", "robotics", "design"];
+// `resume` marks items curated for the general overview; swe/robotics/design
+// produce focused CVs. An item can belong to multiple categories.
+export type Tag = "resume" | "swe" | "robotics" | "design";
+export const ALL_TAGS: Tag[] = ["resume", "swe", "robotics", "design"];
 
 export const introData = {
     name: "Panithi Makthiengtrong",
@@ -25,30 +26,30 @@ export const technologies = [
     {
         section: "Programming Languages:",
         details: "JavaScript, Node.js, TypeScript, Python, Golang, C++, C (Arduino)",
-        tags: ["swe", "robotics"] as Tag[],
+        tags: ["resume", "swe", "robotics"] as Tag[],
     },
     {
         section: "Libraries:",
         details:
             "ReactJS, NextJS, TailwindCSS, ExpressJS, Svelte, Pytorch, Tensorflow, Astro, Ionic React",
-        tags: ["swe", "robotics"] as Tag[],
+        tags: ["resume", "swe", "robotics"] as Tag[],
     },
     {
         section: "Robotics & Embedded:",
         details:
             "ROS2, MuJoCo, Arduino, Raspberry Pi, Raspberry Pi Pico, I2C/SMBus, BLE, RF, ArtNet/DMX, PCB Design (EasyEDA), stepper/servo motor control",
-        tags: ["robotics"] as Tag[],
+        tags: ["resume", "robotics"] as Tag[],
     },
     {
         section: "Tools:",
         details:
             "Git, Docker, Firebase, Vercel, Github Actions, AWS, Google Cloud Platform",
-        tags: ["swe", "robotics"] as Tag[],
+        tags: ["resume", "swe", "robotics"] as Tag[],
     },
     {
         section: "Other:",
         details: "Figma, Adobe Photoshop, Adobe Illustrator, Adobe Premiere Pro",
-        tags: ["design"] as Tag[],
+        tags: ["resume", "design"] as Tag[],
     },
 ];
 
@@ -56,12 +57,12 @@ export const educations = [
     {
         head: "B.Eng. Robotics and Artificial Intelligence Engineering (International Program)",
         details: "Chulalongkorn University, TH. 2022-2026",
-        tags: ["swe", "robotics", "design"] as Tag[],
+        tags: ["resume", "swe", "robotics", "design"] as Tag[],
     },
     {
         head: "Science-Mathematics Program",
         details: "Triam Udom Suksa School, TH. 2019-2021",
-        tags: ["swe", "robotics", "design"] as Tag[],
+        tags: ["resume", "swe", "robotics", "design"] as Tag[],
     },
 ];
 
@@ -72,7 +73,7 @@ export const workExperiences = [
         company: "Sertis Company Limited",
         url: "https://sertiscorp.com/",
         years: ["Jun 2025", "Oct 2025"],
-        tags: ["swe", "design"] as Tag[],
+        tags: ["resume", "swe", "design"] as Tag[],
         details: [
             "Helped develop and implement a design tokens system that synchronizes work from Figma by the UX/UI team with the dev team by converting them into code automatically using Style Dictionary.",
             "Used ReactJS to build front-end systems for enterprise-grade applications.",
@@ -84,7 +85,7 @@ export const workExperiences = [
         company: "Bualuang Securities Public Company Limited",
         url: "https://www.bualuang.co.th/",
         years: ["Jun 2024", "Jul 2024"],
-        tags: ["swe", "robotics"] as Tag[],
+        tags: ["resume", "swe", "robotics"] as Tag[],
         details: [
             "Developed artificial neural network models to predict values and classify data based on historical data.",
             "Researched about recommendation systems and deep recommender systems to effectively recommend products to customers.",
@@ -96,7 +97,7 @@ export const workExperiences = [
         company: "Gamlytics (startup)",
         url: "https://gamlytics.gg/",
         years: ["Jun 2023", "Aug 2023"],
-        tags: ["swe"] as Tag[],
+        tags: ["resume", "swe"] as Tag[],
         details: [
             "Developed the web frontend of Gamlytics, an AI powered analytics and management platform for E-Sports using NextJS, React and TailwindCSS.",
         ],
@@ -109,7 +110,7 @@ export const activityExperiences = [
         company: "Engineering Student Committee, Chulalongkorn University",
         url: "https://instagram.com/escchula",
         years: ["Jun 2024", "current"],
-        tags: ["design", "swe"] as Tag[],
+        tags: ["resume", "design", "swe"] as Tag[],
         details: [
             "Managing the social media accounts of ESC (instagram.com/esccchula, fb.me/escchula) with more than 440K views and 57k reach combined per month.",
             "Set up the ESC design system — a combination of design tokens, variables, components, and styles kit for the ESC design team quickly create new designs using Figma.",
@@ -145,7 +146,7 @@ export const activityExperiences = [
         company: "Thinc. (Thailand Incubator Club)",
         url: "https://thinc.in.th",
         years: ["2022", "current"],
-        tags: ["swe", "design"] as Tag[],
+        tags: ["resume", "swe", "design"] as Tag[],
         details: [
             "Contributed in building a community of Chulalongkorn University students who are interested in using technology to create things that make an impact on society.",
             "Advised club members on how to develop their projects and their software development, data science, product design skills in club projects.",
@@ -160,7 +161,7 @@ export const activityExperiences = [
             "Information System Development Department, Student Government of Chulalongkorn University",
         url: "https://github.com/isd-sgcu",
         years: ["Jun 2023", "May 2024"],
-        tags: ["swe"] as Tag[],
+        tags: ["resume", "swe"] as Tag[],
         details: [
             "Coordinated with stakeholders to develop and maintain several services and websites in 2023 (Rub Puen Kao Mai 66, CU Open House 2024, JohnJud, ISD Website, CU-TU Unity Football Match 2024) for the Student Government of Chulalongkorn University (SGCU) which is used by more than 6,000 students.",
             "Managed a team of more than 50 developers and designers to develop and maintain services for the Student Government of Chulalongkorn University (SGCU).",
@@ -186,7 +187,7 @@ export const activityExperiences = [
         company: "Creatorsgarten",
         url: "https://creatorsgarten.org",
         years: ["2021", "current"],
-        tags: ["swe", "design"] as Tag[],
+        tags: ["resume", "swe", "design"] as Tag[],
         details: [
             "Hosted the Seventh and Eighth Stupid Hackathon in Thailand, a hackathon where participants are encouraged to create something useless that nobody needs for fun. The seventh event was held at the Knowledge Exchange Center, Bangkok, Thailand with more than 150 participants, and the eighth event was held at the Faculty of Engineering, Chulalongkorn University with more than 120 participants.",
             "Volunteered at events hosted by Creatorsgarten such as the 5th and 6th Stupid Hackathon in Thailand.",
@@ -211,7 +212,7 @@ export const projects = [
         details:
             'Competed in IDC RoboCon, an international robot design competition in Shanghai, China, with teams from Thailand, China, Japan, South Korea, Egypt, and India. Built a builder robot and a "mission scorer" robot in ~2 weeks — covering design, fabrication, and programming. Used ROS2 and MuJoCo for simulation, Arduino (C++) for motor control and RF/web communication, and a BLE-controlled web interface. Awarded a Thailand student representative team prize.',
         url: "",
-        tags: ["robotics"] as Tag[],
+        tags: ["resume", "robotics"] as Tag[],
         hide: false,
     },
     {
@@ -219,7 +220,7 @@ export const projects = [
         details:
             "My final-year engineering project: an automated robotic cooker with four microcontroller-driven submodules (ingredient dispenser, bag cutter, cooker, and a robotic-arm lid opener), all coordinated over an I2C bus by a Raspberry Pi. Reverse-engineered the cooker control board to emulate its rotary encoder and buzzer signals with a microcontroller.",
         url: "",
-        tags: ["robotics", "swe"] as Tag[],
+        tags: ["resume", "robotics", "swe"] as Tag[],
         hide: false,
     },
     {
@@ -227,7 +228,7 @@ export const projects = [
         details:
             "A thermal-printer photo booth operated by a fleet of Raspberry Pis, each connected to a camera and printer. Built the embedded software managing the machines plus an admin dashboard to monitor machines and lay out the printed design. Installed in a café for around a week.",
         url: "",
-        tags: ["robotics", "swe"] as Tag[],
+        tags: ["resume", "robotics", "swe"] as Tag[],
         hide: false,
     },
     {
@@ -267,7 +268,7 @@ export const projects = [
         details:
             "ช่วยทุกคนกาบัตรเลือกตั้งของตัวเองได้อย่างมั่นใจ — An interactive website that provides information about the 2023 Election, including an Election Simulator, a game that guides you through the process of the election. Integrated with a machine learning model that asseses if the election ballot is valid or not.",
         url: "https://github.com/PED4you/ped4you-website",
-        tags: ["swe"] as Tag[],
+        tags: ["resume", "swe"] as Tag[],
         hide: false,
     },
     {
@@ -275,7 +276,7 @@ export const projects = [
         details:
             "A website for generating a study and exam schedule for students who are applying for universities in Thailand, the website gained a small traction via twitter and my friends.",
         url: "https://tcas.betich.me",
-        tags: ["swe"] as Tag[],
+        tags: ["resume", "swe"] as Tag[],
         hide: false,
     },
 ];
@@ -286,7 +287,7 @@ export const contributions = [
         details:
             "A website that gathers gather competition opportunities, camps, and activities that may be the starting point of great opportunities",
         url: "https://contester.life",
-        tags: ["swe"] as Tag[],
+        tags: ["resume", "swe"] as Tag[],
         hide: false,
     },
     {
@@ -342,7 +343,7 @@ export const contributions = [
         details:
             "Contributed in developed the front-end for Programming.in.th, a website for practicing algorithms, data structures and competitive programming.",
         url: "programming.in.th",
-        tags: ["swe"] as Tag[],
+        tags: ["resume", "swe"] as Tag[],
         hide: false,
     },
     {
@@ -381,6 +382,6 @@ export const contributions = [
 export const interests = [
     {
         text: "Areas of Interest : Technology, Web Development, UX/UI Design, Graphic Design, Machine Learning, Artificial Intelligence, Robotics, Embedded Systems, Music Theory, Video Production",
-        tags: ["swe", "robotics", "design"] as Tag[],
+        tags: ["resume", "swe", "robotics", "design"] as Tag[],
     },
 ];
