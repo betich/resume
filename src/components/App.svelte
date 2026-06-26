@@ -6,7 +6,6 @@
     activityExperiences,
     contributions,
     educations,
-    fullVersionLink,
     interests,
     introData,
     projects,
@@ -20,7 +19,8 @@
   // "resume" is a curated overview (its own tag); the specific tags produce a
   // focused CV that also renames the print output / saved PDF.
   type Filter = Tag
-  let filter: Filter = "resume"
+  export let initialFilter: Filter = "resume"
+  let filter: Filter = initialFilter
   const filters: { value: Filter; label: string }[] = [
     { value: "resume", label: "Résumé" },
     { value: "robotics", label: "Robotics" },
@@ -40,8 +40,14 @@
   $: matches = (tags: Tag[] = []) => tags.includes(filter)
 
   $: docTitle = docTitles[filter]
+  // Per-version short link, e.g. resume.betich.me/robotics (root for résumé).
+  $: linkPath = filter === "resume" ? "" : `/${filter}`
+  $: onlineLabel = `resume.betich.me${linkPath}`
+  $: onlineHref = `https://resume.betich.me${linkPath}`
   // Updates the browser tab + the suggested filename when saving as PDF.
   $: if (typeof document !== "undefined") document.title = `${introData.name} — ${docTitle}`
+  // Keep the address bar in sync so the printed link matches what's shown.
+  $: if (typeof window !== "undefined") window.history.replaceState(null, "", linkPath || "/")
 </script>
 
 <header
@@ -87,7 +93,11 @@
 </header>
 
 <main class="text-center p-4 m-0 md:m-8 xl:mx-auto max-w-screen-xl">
-  <div class="print-only text-right uppercase tracking-wider text-[8pt] mb-1">{docTitle}</div>
+  <div class="print-only text-right text-[8pt] mb-1">
+    <span class="uppercase tracking-wider">{docTitle}</span>
+    · View online at
+    <a href={onlineHref} target="_blank" rel="noopener">{onlineLabel}</a>
+  </div>
 
   <Intro {...introData} />
 
@@ -207,8 +217,8 @@
   </section>
 
   <footer class="print-only">
-    (See <a href={fullVersionLink} target="_blank" rel="noopener">full version</a>
-    or <a href={sourceLink} target="_blank" rel="noopener">source</a>)
+    (View this CV online at <a href={onlineHref} target="_blank" rel="noopener">{onlineLabel}</a>
+    or see the <a href={sourceLink} target="_blank" rel="noopener">source</a>)
   </footer>
 </main>
 

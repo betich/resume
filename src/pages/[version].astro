@@ -1,0 +1,27 @@
+---
+import App from "../components/App.svelte";
+import Layout from "../layouts/Layout.astro";
+
+export function getStaticPaths() {
+    return [
+        { params: { version: "resume" } },
+        { params: { version: "robotics" } },
+        { params: { version: "swe" } },
+        { params: { version: "design" } },
+    ];
+}
+
+const docTitles: Record<string, string> = {
+    resume: "Résumé",
+    robotics: "Robotics CV",
+    swe: "Software Engineering CV",
+    design: "Design & Marketing CV",
+};
+
+const { version } = Astro.params;
+const title = `Panithi Makthiengtrong — ${docTitles[version ?? "resume"] ?? "Résumé"}`;
+---
+
+<Layout title={title}>
+    <App client:load initialFilter={version} />
+</Layout>
