@@ -7,6 +7,8 @@
   export let years: string[] = []
   export let details: string[] = []
   export let type: string = ""
+  // accepted via spread; not rendered here (used for filtering upstream)
+  export let tags: string[] = []
 </script>
 
 <div class="work-experience">
