@@ -31,7 +31,7 @@ export const technologies = [
     {
         section: "Libraries:",
         details:
-            "ReactJS, NextJS, TailwindCSS, ExpressJS, Svelte, Pytorch, Tensorflow, Astro, Ionic React",
+            "ReactJS, NextJS, TailwindCSS, ExpressJS, Svelte, Pytorch, Tensorflow, Astro, Ionic React, Expo",
         tags: ["resume", "swe", "robotics"] as Tag[],
     },
     {
