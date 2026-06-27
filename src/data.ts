@@ -37,7 +37,7 @@ export const technologies = [
     {
         section: "Robotics & Embedded:",
         details:
-            "ROS2, MuJoCo, Arduino, Raspberry Pi, Raspberry Pi Pico, I2C/SMBus, BLE, RF, ArtNet/DMX, PCB Design (KiCad, EasyEDA), Fusion 360, stepper/servo motor control",
+            "ROS2, MuJoCo, Arduino, Raspberry Pi, Raspberry Pi Pico, I2C/SMBus, BLE, RF, DMX, PCB Design (KiCad, EasyEDA), Fusion 360, Motor control",
         tags: ["resume", "robotics"] as Tag[],
     },
     {
